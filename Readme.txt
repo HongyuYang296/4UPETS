@@ -1,6 +1,3 @@
-Thanks for downloading this template!
+##4UPET
 
-Template Name: Maxim
-Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+###### don't know how to protect your dog in heatwaves? try 4UPETS
