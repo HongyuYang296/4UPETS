@@ -1,0 +1,191 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+    margin: 0;
+    background-color:#F8EEE7;
+}
+* {
+    box-sizing: border-box;
+}
+h1 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+h2 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+h3 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+p {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+#mapHeader {
+    padding-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#tv_container {
+    background: url('http://4upets.live/wp-content/uploads/2022/05/工作会议记录-40-2.jpg') no-repeat top left transparent;
+    width: 400px; /* Adjust TV image width */
+    height: 600px; /* Adjust TV image height */
+    position: relative;
+    background-size: contain;
+
+}
+
+#tv_container video {
+    position: absolute;
+    top: 130px; /* Adjust top position */
+    left: 0px; /* Adjust left position */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.notes {
+    margin: auto;
+    padding: 2rem 1.2rem 0;
+    max-width: 35rem;
+    font-family: Open Sans, sans serif;
+    text-align: center;
+}
+.container#dog {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.lg-container {
+    max-width: 550px;
+    position: relative;
+    margin: 1rem;
+    padding: 0;
+}
+.lg-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}
+.lg-hotspot {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.lg-hotspot:hover .lg-hotspot__button, .lg-hotspot:active .lg-hotspot__button {
+    border-color: #ff774c;
+}
+.lg-hotspot:hover .lg-hotspot__button:after, .lg-hotspot:active .lg-hotspot__button:after {
+    background-color: #ff774c;
+}
+.lg-hotspot--selected {
+    z-index: 999;
+}
+.lg-hotspot--selected .lg-hotspot__label {
+    opacity: 1;
+}
+.lg-hotspot__button {
+    height: 48px;
+    width: 48px;
+    padding: 0px;
+    border-radius: 100%;
+    border: 1px solid #ff6000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    animation: button-pulse 7s ease-in-out infinite;
+}
+.lg-hotspot__button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    content: "";
+    display: block;
+    height: 16.8px;
+    width: 16.8px;
+    border-radius: 100%;
+    border: 3px solid white;
+    background-color: #ff6000;
+    transition: border-color 1s linear;
+}
+.lg-hotspot__label {
+    position: absolute;
+    padding: 0 0 1.1em 0;
+    width: 10em;
+    max-width: 50vw;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14.5px;
+    line-height: 1.45em;
+    z-index: -1;
+    border-radius: 2px;
+    user-select: none;
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+    .lg-hotspot__label#body {
+        width: 14em;
+
+    }
+.lg-hotspot__label h4 {
+    margin: 0;
+    padding: 0.65em 24px;
+    background-color: #555;
+    font-size: 1.1em;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    color: white;
+    border-radius: 2px 2px 0 0;
+}
+.lg-hotspot__label p {
+    margin: 0;
+    padding: 1.1em 24px 0 24px;
+    color: #333;
+}
+.lg-hotspot--top-left .lg-hotspot__label {
+    top: 20px;
+    left: 20px;
+}
+.lg-hotspot--top-right .lg-hotspot__label {
+    top: -150px;
+    right: 24px;
+}
+.lg-hotspot--top-right2 .lg-hotspot__label {
+    top: 24px;
+    right: 24px;
+}
+
+.lg-hotspot--bottom-right .lg-hotspot__label {
+    right: 24px;
+    bottom: 24px;
+}
+.lg-hotspot--bottom-left .lg-hotspot__label {
+    bottom: 24px;
+    left: 24px;
+}
+@keyframes button-pulse {
+    0% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1.15, 1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
