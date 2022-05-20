@@ -1,0 +1,180 @@
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active
+
+
+{
+    color: #fff;
+    background-color: #00838f !important;
+    border-color: #00838f !important;
+    box-shadow: none;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: 1px solid #00838f;
+
+}
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#map {
+    height: 50%;
+    background-color: grey;
+    width: 100%;
+
+    min-width:300px;
+    min-height:80vh;
+
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#F8EEE7
+}
+
+
+
+/* TODO: Step 4A1: Make a generic sidebar */
+/* Styling for an info pane that slides out from the left.
+ * Hidden by default. */
+#panel {
+    height: 100%;
+
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+
+}
+
+.open {
+    width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+}
+
+.place,
+p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+.details {
+    color: darkslategrey;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+.mapCard {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 4px;
+}
+.mapCard:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+#card {
+    min-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+
+    background: linear-gradient(to left, #13547a, #80d0c7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #282828;
+}
+h1 {
+    color: white;
+}
+h2 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+h3 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+.task {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+.abstract, .details {
+    width: 100%;
+    padding: 15px 30px;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+}
+.task:hover .abstract, .task:hover .details {
+    background: rgba(250, 250, 250, 1);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.abstract {
+    transition: 0.3s ease all;
+}
+.details {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotateX(-180deg);
+    transform-origin: top center;
+    backface-visibility: hidden;
+    transition: 0.3s transform ease;
+}
+.details:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: grey;
+}
+.task:hover .details {
+    max-height: none;
+    overflow: visible;
+    visibility: visible;
+    transform: rotateX(0deg);
+}
+.details__inner {
+    padding: 15px 30px;
+}
+
+#search {
+    background-size: cover;
+    background-position: 50% 20%;
+    height: 30%;
+    background-image: url("https://wallpaperaccess.com/full/1841229.jpg");
+}
+
+
