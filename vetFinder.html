@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/logo3.png" rel="icon">
+    <link href="assets/img/logo3.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendor/vetFinder/vetFinder.css" rel="stylesheet">
+
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -67,7 +68,7 @@
     <div id="search">
         <div class="container mt-5" style="padding-top: 80px; padding-bottom: 30px" >
             <div class="row d-flex justify-content-center">
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <div class="card p-3  py-4" style="background-color:#F8EEE7; opacity: 0.85">
                         <h3 style="text-align: center">Find Nearby Vets <i class="fa fa-hospital-o" aria-hidden="true"></i></h3>
                         <div class="row g-3 mt-2">
@@ -78,19 +79,17 @@
                                     <option value="5000">5 km</option>
                                     <option value="10000">10 km</option>
                                 </select>
-
                             </div>
-
                             <div class="col-md-7">
-                                <input type="text" class="form-control" id="InputAddress" placeholder="Enter address e.g. street, city and state or zip" onclick="initAutocomplete()">
+                                <input type="text" class="form-control" id="InputAddress" placeholder="Enter address e.g. street, city and state or zip">
                             </div>
                             <div class="col-md-2">
                                 <button onclick="saveUserData()" class="btn btn-secondary btn-block">Search</button>
                             </div>
                             <div class="col-md-1">
-                                <input  onclick="backToYourLocation()" id="image" type="image" width="40" height="40" alt="Login"
-                                        src="https://cdn-icons-png.flaticon.com/512/1483/1483285.png">
-                            </div>
+                                <input  onclick="backToYourLocation()" id="relocate" type="image" width="40" height="40" alt="Login"
+                                           src="https://cdn-icons-png.flaticon.com/512/1483/1483285.png">
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -100,8 +99,6 @@
 
     <div>
     </div>
-    <p id="tests"></p>
-
     <div class="container-fluid mt-3">
         <div class="row">
             <div class="col-sm-8" >
@@ -121,7 +118,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </main><!-- End #main -->
 
@@ -189,6 +185,7 @@
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/vendor/vetFinder/vetFinder.js"></script>
+<script src="https://kit.fontawesome.com/b83f27d12f.js" crossorigin="anonymous"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXFqRRFtTpVqba8_b6AHnmMqktyMwItMM&libraries=places&callback=initMap">
 </script>
 

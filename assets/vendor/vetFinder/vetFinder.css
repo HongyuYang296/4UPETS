@@ -79,6 +79,13 @@ p {
     padding-right: 18px;
 }
 
+#relocate {
+    margin-left: -25px;
+}
+
+#relocate:hover {
+  opacity: 0.8;
+}
 
 .details {
     color: darkslategrey;

@@ -11,10 +11,6 @@ let service;
 let infoPane;
 let inputPos=null;
 let searDistance;
-let openData;
-
-console.log(inputPos);
-console.log(pos);
 
 
 function saveUserData() {
@@ -65,27 +61,37 @@ function updateMap(){
     });
 }
 
+
 function backToYourLocation() {
     // Initialize variables
     bounds = new google.maps.LatLngBounds();
     infoWindow = new google.maps.InfoWindow;
     currentInfoWindow = infoWindow;
-    /* TODO: Step 4A3: Add a generic sidebar */
-    infoPane = document.getElementById('panel');
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: pos,
-        zoom: 15
+    navigator.geolocation.getCurrentPosition(position => {
+        pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        };
+
+        console.log(pos);
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: pos,
+            zoom: 15
+        });
+        bounds.extend(pos);
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent('Location found.');
+        infoWindow.open(map);
+        map.setCenter(pos);
+
+        // Call Places Nearby Search on user's location
+        searDistance = 5000;
+        getNearbyPlaces(pos);
+    }, () => {
+        // Browser supports geolocation, but user has denied permission
+        handleLocationError(true, infoWindow);
     });
-
-    bounds.extend(pos);
-    infoWindow.setPosition(pos);
-    infoWindow.setContent('Location find.');
-    infoWindow.open(map);
-    map.setCenter(pos);
-
-    // Call Places Nearby Search on user's location
-    searDistance = 5000;
-    getNearbyPlaces(pos);
 }
 
 function initMap() {
@@ -181,7 +187,8 @@ function getNearbyPlaces(position) {
     let request = {
         location: position,
         radius: searDistance,
-        keyword: 'vet'
+        keyword: 'vet',
+        type: 'veterinary_care'
     };
 
     service = new google.maps.places.PlacesService(map);
@@ -190,77 +197,29 @@ function getNearbyPlaces(position) {
 
 // Handle the results (up to 20) of the Nearby Search
 function nearbyCallback(results, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
         createMarkers(results);
         showOnList(results);
-        //     console.log(results);
+
+    } else {
+        document.getElementById('findVets').innerHTML = 'Nearby Vets (0 results)';
     }
-}
-
-function detailCallback(results, status, pagination) {
-    if (status == google.maps.places.PlacesServiceStatus.OK){
-        showOnList2(results);
-        //         console.log(results.opening_hours.isOpen());
-    }
-}
-
-
-function showOnList2(places){
-    //      console.log(places.name);
-
-    //      document.getElementById('tests').innerHTML += places
-
-    //  var i,
-    //      len = places.address_components.length;
-    //  for (i=0; i<len; i++) {
-    //      const content = '<div class="task">\n' +
-    //          '                <div class="abstract">\n' +
-    //          '                    <h5>' +
-    //          places[i].address_components.name +
-    //          '</h5>\n' +
-    //          '                    <p>' +
-    //          '<i class="fa fa-map-marker"></i>'+ ' ' +
-    //          places[i].vicinity +
-    //          '</p>\n' +
-    //          '                </div>\n' +
-    //          '                <div class="details">\n' +
-    //          '                    <div class="details__inner">\n' +
-    //          '                        <h5>Details</h5>\n' +
-    //          '<p>' + 'Rating: ' +
-    //          places[i].rating + ' ' +
-    //          '<i class="fa fa-star" aria-hidden="true"></i>'+
-    //          '</p>\n' +
-    //          '<p>'+ 'openss:'+ places[i].opening_hours + '</p>' +
-    //          '                    </div>\n' +
-    //          '                </div>\n' +
-    //          '            </div>' +
-    //          '            <br>'
-    //      document.getElementById('temps').innerHTML += content
-    // }
-
 }
 
 
 
 function showOnList(places){
-    var i,
+    let findVet;
+    let i,
         len = places.length;
 //        console.log('ee'+ places.length);
-    const findVet =  'Nearby Vets '+'('+ len + ' results)';
-    document.getElementById('findVets').innerHTML = findVet;
+    console.log('len: '+ len);
+    console.log('p'+ places);
+        findVet =  'Nearby Vets '+'('+ len + ' results)';
+        document.getElementById('findVets').innerHTML = findVet;
 
 
-    //       console.log(places)
-    // for (var i=0; i<6; i++) {
-    //     console.log(openResults.opening_hours.weekday_text[i])
-    // }
-    service = new google.maps.places.PlacesService(map);
     for (i=0; i<len; i++) {
-        let request = {
-            placeId : places[i].place_id
-        };
-
-        service.getDetails(request, detailCallback)
 
 
         const content1 = '<div class="task">\n' +
@@ -278,11 +237,9 @@ function showOnList(places){
             '</p>\n' +
             '<p>' + 'Rating: ' +
             places[i].rating + ' ' +
-            '<i class="fa fa-star" aria-hidden="true"></i>'+
+            '<i class="fa fa-star"></i>'+
             '</p>\n' +
-            '<p>'+ 'Open now: Opening</p>\n' +
-            '<a href="https://www.gihosoft.com/youtube-downloader/purchase.html?from=prod"> open on google map ' +
-            '</a>'+
+            '<p>'+ 'Open now: Yes</p>\n' +
             '                    </div>\n' +
             '                </div>\n' +
             '            </div>' +
@@ -306,6 +263,7 @@ function showOnList(places){
             places[i].rating + ' ' +
             '<i class="fa fa-star" aria-hidden="true"></i>'+
             '</p>\n' +
+            '<p>'+ 'Open now: No</p>\n' +
             '                    </div>\n' +
             '                </div>\n' +
             '            </div>' +
@@ -318,8 +276,6 @@ function showOnList(places){
         }else {
             document.getElementById('temps').innerHTML += content2;
         }
-
-
 
         console.log(places[i].name);
     }
@@ -378,13 +334,12 @@ function createMarkers(places) {
 /* TODO: Step 4C: Show place details in an info window */
 // Builds an InfoWindow to display details above the marker
 function showDetails(placeResult, marker, status) {
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
         let placeInfowindow = new google.maps.InfoWindow();
-        let rating = "None";
         let open = placeResult.opening_hours.weekday_text + '';
         let open2 = open.split(',')
 
-        if (placeResult.rating) rating = placeResult.rating;
+        if (placeResult.rating)
         placeInfowindow.setContent('<div><strong>' + placeResult.name +
             '</strong><br><br>'+
             open2[0] + '<br>' +
@@ -398,77 +353,26 @@ function showDetails(placeResult, marker, status) {
         placeInfowindow.open(marker.map, marker);
         currentInfoWindow.close();
         currentInfoWindow = placeInfowindow;
-        showPanel(placeResult);
     } else {
         console.log('showDetails failed: ' + status);
     }
 }
 
-/* TODO: Step 4D: Load place details in a sidebar */
-// Displays place details in a sidebar
-function showPanel(placeResult) {
-    // If infoPane is already open, close it
-    if (infoPane.classList.contains("open")) {
-        infoPane.classList.remove("open");
-    }
 
-    // Clear the previous details
-    while (infoPane.lastChild) {
-        infoPane.removeChild(infoPane.lastChild);
-    }
 
-    /* TODO: Step 4E: Display a Place Photo with the Place Details */
-    // Add the primary photo, if there is one
-    if (placeResult.photos) {
-        let firstPhoto = placeResult.photos[0];
-        let photo = document.createElement('img');
-        photo.classList.add('hero');
-        photo.src = firstPhoto.getUrl();
-        infoPane.appendChild(photo);
-    }
 
-    // Add place details with text formatting
-    let name = document.createElement('h1');
-    name.classList.add('place');
-    name.textContent = placeResult.name;
-    infoPane.appendChild(name);
-    if (placeResult.rating) {
-        let rating = document.createElement('p');
-        rating.classList.add('details');
-        rating.textContent = `Rating: ${placeResult.rating} \u272e`;
-        infoPane.appendChild(rating);
-    }
-    let address = document.createElement('p');
-    address.classList.add('details');
-    address.textContent = placeResult.formatted_address;
-    infoPane.appendChild(address);
-    if (placeResult.website) {
-        let websitePara = document.createElement('p');
-        let websiteLink = document.createElement('a');
-        let websiteUrl = document.createTextNode(placeResult.website);
-        websiteLink.appendChild(websiteUrl);
-        websiteLink.title = placeResult.website;
-        websiteLink.href = placeResult.website;
-        websitePara.appendChild(websiteLink);
-        infoPane.appendChild(websitePara);
-    }
-
-    // Open the infoPane
-    infoPane.classList.add("open");
-}
-
-// autocomplete address when user input
-function initAutocomplete() {
-    address1Field = document.querySelector('#search-address');
-    // Create the autocomplete object, restricting the search predictions to
-    // addresses in the US and Canada.
-    autocomplete = new google.maps.places.Autocomplete(address1Field, {
-        componentRestrictions: {country: 'au'},
-        fields: ["address_components", "geometry"],
-        types: ["address"],
-    });
-    address1Field.focus();
-    // When the user selects an address from the drop-down, populate the
-    // address fields in the form.
-    autocomplete.addListener("place_changed", fillInAddress);
-}
+// // autocomplete address when user input
+// function initAutocomplete() {
+//     address1Field = document.querySelector('#search-address');
+//     // Create the autocomplete object, restricting the search predictions to
+//     // addresses in the US and Canada.
+//     autocomplete = new google.maps.places.Autocomplete(address1Field, {
+//         componentRestrictions: {country: 'au'},
+//         fields: ["address_components", "geometry"],
+//         types: ["address"],
+//     });
+//     address1Field.focus();
+//     // When the user selects an address from the drop-down, populate the
+//     // address fields in the form.
+//     autocomplete.addListener("place_changed", fillInAddress);
+// }
