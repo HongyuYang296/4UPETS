@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-color:#F8EEE7;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+::selection{
+    color: #fff;
+    background: #43AFFC;
+
+
+}
+
+
+.wrapper{
+    width: 90%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+}
+.wrapper header{
+    display: flex;
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+    padding: 12px 15px;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+header i{
+    font-size: 0em;
+    font-family: Comic Sans MS, cursive, sans-serif;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.wrapper.active header i{
+    margin-left: 5px;
+    font-size: 30px;
+}
+.wrapper .input-part{
+    margin: -20px 25px;
+}
+.wrapper.active .input-part{
+    display: none;
+}
+.input-part .info-txt{
+    display: none;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.input-part .info-txt.error{
+    color: #721c24;
+    display: block;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.input-part .info-txt.pending{
+    color: #0c5460;
+    display: block;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+.input-part :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+}
+.input-part input{
+    text-align: center;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+}
+.input-part input:is(:focus, :valid){
+    border: 2px solid #43AFFC;
+}
+.input-part input::placeholder{
+    color: #bfbfbf;
+    font-size: 16px;
+}
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #ccc;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator::before{
+    content: "or";
+    color: #b3b3b3;
+    font-size: 19px;
+    padding: 0 15px;
+    background: #fff;
+}
+
+
+.wrapper .weather-part{
+    display: none;
+    margin: -50px 0 50px;
+    padding-bottom: 1px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 105px;
+}
+
+.weather-part img#img2{
+    max-width: 35px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-weight: 500;
+    font-size: 52px;
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+    font-size: 30px;
+    display: block;
+    margin: 10px 5px 0 0;
+}
+.weather-part .weathers{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+
+}
+.weather-part .location{
+    display: flex;
+    font-size: 19px;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+.location i{
+    font-size: 22px;
+    margin: 4px 5px 0 0;
+}
+.weather-part .bottom-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+}
+.bottom-details .column{
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+}
+.column i{
+    color: #5DBBFF;
+    font-size: 40px;
+}
+.column.humidity{
+    border-left: 1px solid #ccc;
+}
+.column .details{
+    margin-left: 3px;
+}
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+.column .details p{
+    font-size: 14px;
+    margin-top: -6px;
+}
+.humidity i{
+    font-size: 37px;
+}
+
+#map-container {
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    background: url(https://images.hdqwalls.com/wallpapers/afternoon-heatwave-4k-ek.jpg) fixed;
+    background-size: cover;
+}
+.button-8 {
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+
+}
+
+#map {
+    height: 40%;
+    background-color: grey;
+    width: 100%;
+
+    min-width:120px;
+    min-height:40vh;
+
+}
+
+
+.mapCard {
+    margin-left: 10%;
+    width: 80%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: gray;
+    padding: 4px;
+}
+.mapCard:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+.button-8:hover,
+.button-8:focus {
+    background-color: #b3d3ea;
+    color: #2c5777;
+}
+
+.button-8:focus {
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+    background-color: #a0c7e4;
+    box-shadow: none;
+    color: #2c5777;
+}
+
+#loadOverlay{display: none;}
+
+img#myImage{
+    width: 150px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+
+}
+
+img#notes{
+    width: 150%;
+    background: transparent;
+}
+
+#heatindex {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+#message {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+#message2 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+#message3 {
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+h1{
+
+    font-size: 30px;
+    margin-left: 10px;
+
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+h2{
+
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 10px;
+
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+p{
+
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+.btn5{
+    padding-top: 15px;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+}
+
+
+.btn4{
+    padding-top: 15px;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+}
+
+.btn3{
+    padding-top: 15px;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+}
+.btn2{
+    padding-top: 15px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+}
+.btn1{
+    padding-top: 15px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width:60px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color:transparent;
+}
+.btn1:hover{
+    opacity: 0.7;
+    width: 65px;
+    transition: all 0.4s ease-in-out;
+    filter: blur(0.2px);
+}
+
+.btn2:hover{
+    opacity: 0.7;
+    width: 65px;
+    transition: all 0.4s ease-in-out;
+    filter: blur(0.2px);
+}
+.btn3:hover{
+    opacity: 0.7;
+    width: 65px;
+    transition: all 0.4s ease-in-out;
+    filter: blur(0.2px);
+}
+.btn4:hover{
+    opacity: 0.7;
+    width: 65px;
+    transition: all 0.4s ease-in-out;
+    filter: blur(0.2px);
+}
+
+.btn5:hover{
+    opacity: 0.7;
+    width: 65px;
+    transition: all 0.4s ease-in-out;
+    filter: blur(0.2px);
+}
+
+
+#weatherMain {
+    padding-top: 100px;
+    padding-left: 2%;
+    padding-right: 5%;
+
+}
+

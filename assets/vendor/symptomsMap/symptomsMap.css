@@ -75,6 +75,22 @@ img {
     width: 100%;
     object-fit: scale-down;
 }
+
+#map-container {
+    width: 100%;
+    height: 15vh;
+    position: relative;
+    background: url(https://images.hdqwalls.com/wallpapers/afternoon-heatwave-4k-ek.jpg) fixed;
+    background-size: cover;
+}
+#map-container2 {
+    width: 100%;
+    height: 2vh;
+    position: relative;
+    background: url(https://images.hdqwalls.com/wallpapers/afternoon-heatwave-4k-ek.jpg) fixed;
+    background-size: cover;
+}
+
 .lg-hotspot {
     position: absolute;
     margin: 0;
