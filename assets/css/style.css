@@ -90,11 +90,11 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 50px;
 }
 @media (max-width: 992px) {
   #header {
-    height: 60px;
+    height: 70px;
   }
 }
 
@@ -307,15 +307,22 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: calc(100vh - 70px);
-  background: url("../img/hero-bg.jpg") center center;
+  height: calc(60vh - 70px);
+  background: url(https://images.hdqwalls.com/wallpapers/afternoon-heatwave-4k-ek.jpg) center center;
   background-size: cover;
   position: relative;
-  margin-top: 70px;
+  margin-top: 45px;
   padding: 0;
 }
 
 
+#map-container {
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  background: url(https://images.hdqwalls.com/wallpapers/afternoon-heatwave-4k-ek.jpg) fixed;
+  background-size: cover;
+}
 
 
 #hero:before {
