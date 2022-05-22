@@ -147,7 +147,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
             }else if (heatIndex >32 && heatIndex <= 41){
@@ -165,7 +165,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
             }else if (heatIndex > 41 && heatIndex <= 54){
@@ -183,7 +183,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
             }else if (heatIndex > 54){
@@ -200,8 +200,13 @@ function weatherDetails(info){
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
                 closeMaps();
                 let content =
-                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' +
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock.</h2>'+
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class="fa fa-asterisk" aria-hidden="true"></i>Maybe you need Vets, try our Vet Finder!</h2>'+'<br>'+
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a>' +
+                    '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
+                    '<a href="https://4upets.live/wp-content/uploads/4UPETS/vetFinder.html" class="button-55">Vet Finder</a>'+
+                    '</div>'
                 document.getElementById('message4')
                     .innerHTML=content;
             }
@@ -275,7 +280,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -294,7 +299,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -313,7 +318,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -331,8 +336,13 @@ function weatherDetails(info){
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
                 closeMaps();
                 let content =
-                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' +
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock.</h2>'+
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class="fa fa-asterisk" aria-hidden="true"></i>Maybe you need Vets, try our Vet Finder!</h2>'+'<br>'+
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a>' +
+                    '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
+                    '<a href="https://4upets.live/wp-content/uploads/4UPETS/vetFinder.html" class="button-55">Vet Finder</a>'+
+                    '</div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -409,7 +419,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -428,7 +438,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -447,7 +457,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -465,8 +475,13 @@ function weatherDetails(info){
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
                 closeMaps();
                 let content =
-                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' +
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock.</h2>'+
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class="fa fa-asterisk" aria-hidden="true"></i>Maybe you need Vets, try our Vet Finder!</h2>'+'<br>'+
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a>' +
+                    '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
+                    '<a href="https://4upets.live/wp-content/uploads/4UPETS/vetFinder.html" class="button-55">Vet Finder</a>'+
+                    '</div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -532,7 +547,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
             }else if (heatIndex >32 && heatIndex <= 41){
@@ -550,7 +565,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -569,7 +584,7 @@ function weatherDetails(info){
                 closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -587,8 +602,13 @@ function weatherDetails(info){
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
                 closeMaps();
                 let content =
-                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-                    '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' +
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock.</h2>'+
+                    '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class="fa fa-asterisk" aria-hidden="true"></i>Maybe you need Vets, try our Vet Finder!</h2>'+'<br>'+
+                    '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a>' +
+                    '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
+                    '<a href="https://4upets.live/wp-content/uploads/4UPETS/vetFinder.html" class="button-55">Vet Finder</a>'+
+                    '</div>'
                 document.getElementById('message4')
                     .innerHTML=content;
 
@@ -615,7 +635,7 @@ function caution(){
     closeMaps();
     let content =
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-        '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+        '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
     document.getElementById('message4')
         .innerHTML=content;
 }
@@ -630,7 +650,7 @@ function extremeCaution(){
     closeMaps();
     let content =
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-        '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+        '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
     document.getElementById('message4')
         .innerHTML=content;
 }
@@ -645,7 +665,7 @@ function danger(){
     closeMaps();
     let content =
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
-        '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
+        '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a></div>'
     document.getElementById('message4')
         .innerHTML=content;
 
@@ -664,21 +684,21 @@ function extremeDanger(){
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' +
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock.</h2>'+
         '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class="fa fa-asterisk" aria-hidden="true"></i>Maybe you need Vets, try our Vet Finder!</h2>'+'<br>'+
-        '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a>' +
+        '<div style="text-align: center"><a href="https://4upets.live/wp-content/uploads/4UPETS/SymptomsMap.html" class="button-55">Symptoms Map</a>' +
         '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'+
-        '<a href="#" class="button-55">Vet Finder</a>'+
+        '<a href="https://4upets.live/wp-content/uploads/4UPETS/vetFinder.html" class="button-55">Vet Finder</a>'+
         '</div>'
     document.getElementById('message4')
         .innerHTML=content;
 
-    const myModal = document.getElementById('myModal')
-    const myInput = document.getElementById('myInput')
-
-    myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
-    })
 
 }
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+})
 function safety(){
     document.getElementById('myImage')
         .src="http://4upets.live/wp-content/uploads/2022/05/tem5-e1651588790664.png";
@@ -692,7 +712,6 @@ function safety(){
         '<i class="fa fa-arrow-down" aria-hidden="true"></i>'
     document.getElementById('message4')
         .innerHTML=contents;
-
     openMaps()
 }
 
