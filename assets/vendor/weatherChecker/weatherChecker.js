@@ -25,13 +25,13 @@ locationBtn.addEventListener("click", () =>{
 });
 
 function requestApi(city){
-    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0891ee5dc748292618ab5b5fc73361bf`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=076f71defbe81d40d41d898d3e06b5f9`;
     fetchData();
 }
 
 function onSuccess(position){
     const {latitude, longitude} = position.coords;
-    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=0891ee5dc748292618ab5b5fc73361bf`;
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=076f71defbe81d40d41d898d3e06b5f9`;
     fetchData();
 }
 
@@ -144,6 +144,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E67E22; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Fatigue is possible in your dog with prolonged exposure and activity. Continuing activity could result in heat cramps in your dog but less likely to get heat stroke.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -161,6 +162,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #D35400; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a long time, heat cramps and heat exhaustion are possible; Your dog is likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -178,6 +180,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E74C3C; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a while, heat cramps and heat exhaustion are likely; Your dog is more likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -195,6 +198,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #A93226; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Heat stroke is imminent. Do not take your dog outside in this weather; Do not leave your dog outside or even trapped in the car. </span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -268,6 +272,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E67E22; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Fatigue is possible in your dog with prolonged exposure and activity. Continuing activity could result in heat cramps in your dog but less likely to get heat stroke.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -286,6 +291,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #D35400; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a long time, heat cramps and heat exhaustion are possible; Your dog is likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -304,6 +310,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E74C3C; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a while, heat cramps and heat exhaustion are likely; Your dog is more likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -322,6 +329,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #A93226; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Heat stroke is imminent. Do not take your dog outside in this weather; Do not leave your dog outside or even trapped in the car. </span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -398,6 +406,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E67E22; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Fatigue is possible in your dog with prolonged exposure and activity. Continuing activity could result in heat cramps in your dog but less likely to get heat stroke.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -416,6 +425,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #D35400; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a long time, heat cramps and heat exhaustion are possible; Your dog is likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -434,6 +444,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E74C3C; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a while, heat cramps and heat exhaustion are likely; Your dog is more likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -452,6 +463,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #A93226; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Heat stroke is imminent. Do not take your dog outside in this weather; Do not leave your dog outside or even trapped in the car. </span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -517,6 +529,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E67E22; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Fatigue is possible in your dog with prolonged exposure and activity. Continuing activity could result in heat cramps in your dog but less likely to get heat stroke.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -534,6 +547,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #D35400; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a long time, heat cramps and heat exhaustion are possible; Your dog is likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -552,6 +566,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #E74C3C; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>If you expose your dog to this temperature for a while, heat cramps and heat exhaustion are likely; Your dog is more likely to get heat stroke from constant exercise.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -570,6 +585,7 @@ function weatherDetails(info){
                     .innerHTML="<span style='color: #A93226; font-family: Comic Sans MS, cursive, sans-serif;margin-top: 25px;'>Heat stroke is imminent. Do not take your dog outside in this weather; Do not leave your dog outside or even trapped in the car.</span>";
                 document.getElementById('heatindex')
                     .innerHTML= "Your heatindex is: " + heatIndex + "°C";
+                closeMaps();
                 let content =
                     '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'><i class=\"fa fa-info-circle\" aria-hidden=\"true\"></i>Tips:</h2>' + '<h2 style=\'font-family: Comic Sans MS, cursive, sans-serif\'>check our symptoms maps, see if your dog sufuring heatstock</h2>'+'<br>'+
                     '<div style="text-align: center"><a href="#" class="button-55">Symptoms Map</a></div>'
@@ -655,6 +671,12 @@ function extremeDanger(){
     document.getElementById('message4')
         .innerHTML=content;
 
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
 
 }
 function safety(){
@@ -700,62 +722,3 @@ function closeMaps(){
         .innerHTML=content;
 }
 
-
-// function initMap(){
-//
-//     let inputPos = document.getElementById("inputAddress").value + ',au';
-//     // Initialize variables
-//     bounds = new google.maps.LatLngBounds();
-//     infoWindow = new google.maps.InfoWindow;
-//     currentInfoWindow = infoWindow;
-//
-//     const geocoder = new google.maps.Geocoder();
-//     geocoder.geocode({'address': inputPos}, function (results, status) {
-//         if (status === google.maps.GeocoderStatus.OK) {
-//             var latitude = parseFloat(results[0].geometry.location.lat());
-//             var longitude = parseFloat(results[0].geometry.location.lng());
-//             pos2 = {lat: latitude, lng: longitude};
-//             console.log(pos);
-//             console.log(pos2);
-//             map = new google.maps.Map(document.getElementById('map'), {
-//                 center: pos2,
-//                 zoom: 15
-//             });
-//
-//             bounds.extend(pos2);
-//
-//             infoWindow.setPosition(pos2);
-//             infoWindow.setContent(' new Location.');
-//             infoWindow.open(map);
-//             map.setCenter(pos2);
-//             // Call Places Nearby Search on user's location
-//             getNearbyPlaces(pos2);
-//         }
-//
-//     });
-// }
-
-
-// // Perform a Places Nearby Search Request
-// function getNearbyPlaces(position) {
-//     let request = {
-//         location: position,
-//         radius: searDistance,
-//         keyword: 'vet',
-//         type: 'veterinary_care'
-//     };
-//
-//     service = new google.maps.places.PlacesService(map);
-//     service.nearbySearch(request, nearbyCallback);
-// }
-//
-// // Handle the results (up to 20) of the Nearby Search
-// function nearbyCallback(results, status) {
-//     if (status === google.maps.places.PlacesServiceStatus.OK) {
-//         createMarkers(results);
-//         showOnList(results);
-//
-//     } else {
-//         document.getElementById('findVets').innerHTML = 'Nearby Vets (0 results)';
-//     }
-// }

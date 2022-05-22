@@ -161,6 +161,15 @@ header i{
     margin-bottom: 30px;
     align-items: flex-start;
 }
+
+.modal-header {
+    border-bottom: 0 none;
+}
+
+.modal-footer {
+    border-top: 0 none;
+}
+
 .location i{
     font-size: 22px;
     margin: 4px 5px 0 0;

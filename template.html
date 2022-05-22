@@ -587,13 +587,14 @@
     });
 
     function requestApi(city){
-        api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=0891ee5dc748292618ab5b5fc73361bf`;
+        // api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=076f71defbe81d40d41d898d3e06b5f9`;
+        api = 'https://api.weatherapi.com/v1/current.json?key=87e1b0a7101648019b131119222205&q=35,139'
         fetchData();
     }
 
     function onSuccess(position){
         const {latitude, longitude} = position.coords;
-        api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=0891ee5dc748292618ab5b5fc73361bf`;
+        api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=076f71defbe81d40d41d898d3e06b5f9`;
         fetchData();
     }
 
